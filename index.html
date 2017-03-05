@@ -17,11 +17,14 @@
 </head>
 
 <body>
-	<embed autostart="true" 
+	<audio loop="true">
+       		<source  src="http://ois5yh1xg.bkt.clouddn.com/%E5%8D%A2%E5%86%A0%E5%BB%B7%E4%B8%80%E7%94%9F%E6%89%80%E7%88%B1.mp3">
+	</audio>
+<!-- 	<embed autostart="true" 
 	       hidden="true" 
 	       loop="true" 
 	       src="http://ois5yh1xg.bkt.clouddn.com/%E5%8D%A2%E5%86%A0%E5%BB%B7%E4%B8%80%E7%94%9F%E6%89%80%E7%88%B1.mp3">
-	</embed>
+	</embed> -->
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
@@ -69,6 +72,11 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		$('html').one('touchstart',function(){
+    			if(music.hasClass('on')){
+             		audio.play();
+          		}
+		});
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
